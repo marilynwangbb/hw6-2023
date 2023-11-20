@@ -53,18 +53,17 @@ function muteButton(){
 	if (video.muted){
 		document.querySelector('#mute').textContent = 'Mute';
 		document.querySelector("#volume").innerHTML = video.volume*100 + '%';
-		console.log("Unmute");
+		console.log("Mute");
 	}
 	else{
-		document.querySelector('#mute').textContent = 'Mute';
-		document.querySelector("#volume").innerHTML = video.volume*100 + '%';
+		document.querySelector('#mute').textContent = 'Unmute';
 		console.log("Unmute");
 	}
 }
 
 function volumeSlider(){
-	video.volume = document.querySelector("#slider").value;
-	document.querySelector("#volume").innerHTML = video.volume*100 + '%';
+	video.volume = document.querySelector("#slider").value / 100;
+	document.querySelector("#volume").innerHTML = video.volume *100 + '%';
 
 }
 
