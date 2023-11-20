@@ -51,12 +51,12 @@ function skipAhead(){
 function muteButton(){
 	video.muted = !video.muted;
 	if (video.muted){
-		document.querySelector('#mute').textContent = 'Mute';
+		document.querySelector('#mute').textContent = 'Unmute';
 		document.querySelector("#volume").innerHTML = video.volume*100 + '%';
 		console.log("Mute");
 	}
 	else{
-		document.querySelector('#mute').textContent = 'Unmute';
+		document.querySelector('#mute').textContent = 'Mute';
 		console.log("Unmute");
 	}
 }
