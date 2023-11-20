@@ -17,6 +17,7 @@ window.addEventListener("load", function loadVideo(){
 
 function playButton(){
 video.play();
+document.querySelector("#volume").innerHTML = video.volume*100 + '%';
 console.log("Play Video")
 
 /*Upadating Volume*/ 
@@ -50,18 +51,20 @@ function skipAhead(){
 function muteButton(){
 	video.muted = !video.muted;
 	if (video.muted){
-		document.querySelector('#mute').textContent = 'unmute';
-		console.log("Mute");
+		document.querySelector('#mute').textContent = 'Mute';
+		document.querySelector("#volume").innerHTML = video.volume*100 + '%';
+		console.log("Unmute");
 	}
 	else{
-		document.querySelector('#mute').textContent = 'mute';
+		document.querySelector('#mute').textContent = 'Mute';
+		document.querySelector("#volume").innerHTML = video.volume*100 + '%';
 		console.log("Unmute");
 	}
 }
 
 function volumeSlider(){
-	video.volume = document.querySelector("#slider").value / 100;
-	document.querySelector("#volume").innerHTML = "Current Volume: " + video.volume * 100 + '%';
+	video.volume = document.querySelector("#slider").value;
+	document.querySelector("#volume").innerHTML = video.volume*100 + '%';
 
 }
 
