@@ -61,7 +61,7 @@ function muteButton(){
 
 function volumeSlider(){
 	video.volume = document.querySelector("#slider").value / 100;
-	document.querySelector("#volume").innerHTML = video.volume * 100 + '%';
+	document.querySelector("#volume").innerHTML = "Current Volume: " + video.volume * 100 + '%';
 
 }
 
